@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 public class Start {
 
-    private static ArrayList<IPPort> arrayOfIPPorts = new ArrayList();
+    private static ArrayList<IPPort> arrayOfIPPorts = new ArrayList<>();
     Thread runner;
 
     public static void main(String[] args) throws UnknownHostException {
@@ -31,7 +31,7 @@ public class Start {
         System.out.println("this pc address is "+ ip);
         ip = countIPAddress.startIP(ip);
         System.out.println("searching does in net "+ ip);
-        do{
+        while(ip != ""){
             ip = countIPAddress.nextIP(ip);
             //System.out.println(ip);
             try{
@@ -45,7 +45,8 @@ public class Start {
                 System.out.println(e.getMessage());
             }
             //break; //using just router for the test
-        } while (ip != "");
+        }
+        //while ();
         System.out.println("Array of found ips:");
         for(String s : ips){
             System.out.println(s);
@@ -72,7 +73,7 @@ public class Start {
         System.out.println(string);
 
         FileWork fw = new FileWork();
-        fw.writeFile(fn + ".csv", string);
+        fw.writeFile(save + ".csv", string);
 
 
     }
