@@ -41,11 +41,6 @@ public class PortScanner implements Runnable {
                 //System.out.println(ipPort);
             }
         }
-
-
-
-
-
     }
 
     @Override
@@ -53,9 +48,7 @@ public class PortScanner implements Runnable {
 
     }
 
-    /*public PortScanner(Stock stock){
-        this.stock = stock;
-    }*/
+
 
     public void scan(String ip, int startPort, int lastPort) {
         //public void run() {

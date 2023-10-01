@@ -36,7 +36,7 @@ public class Start {
             //System.out.println(ip);
             try{
                 InetAddress inetAddress = InetAddress.getByName(ip);
-                System.out.println(ip);
+               //System.out.println(ip);
                 if(inetAddress.isReachable(20)){
                     System.out.println("Found ip: " + ip);
                     ips.add(ip);
@@ -72,7 +72,7 @@ public class Start {
         System.out.println(string);
 
         FileWork fw = new FileWork();
-        fw.writeFile(fn, string);
+        fw.writeFile(fn + ".csv", string);
 
 
     }
